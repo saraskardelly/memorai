@@ -37,7 +37,8 @@
         <option value="neuromodulation_therapie">Neuromodulation und Therapie</option>
         <option value="ki_datenanalyse_biologische_daten">KI und Datenanalyse von biologischen Daten</option>
         <option value="ki_iot_monitoring">KI und IoT - Monitoring</option>
-        <option value="pflegeroboter_ki_anwendungen">Pflegeroboter und Andere KI Anwendungen</option>
+        <option value="pflegeroboter">Pflegeroboter: Soziale Roboter, Assistenzroboter</option>
+        <option value="ki_anwendungen">Andere KI Anwendungen: VR, Chatbots, Serious Games, TeleCare</option>
     </select>
 
     <!-- Hier wird die Karte angezeigt -->
@@ -61,12 +62,21 @@
         var locations = [
             {
                 lat: 47.069650, lng: 15.450052, 
-                application: 'alltagszentriert', 
+                application: 'frueherkennung', 
                 tech: 'neurale_schnittstellen', 
                 name: 'INTRECOM',
-                description: 'INTRECOM entwickelt ein implantierbares BCI, das Gehirnsignale in Echtzeit aufzeichnet. Diese Gehirnsignale sollen drahtlos an einen Computer übertragen werden, der die Signale analysiert und in die Worte übersetzt, die eine sprachbehinderte Person sagen möchte.',
+                description: 'INTRECOM entwickelt ein implantierbares BCI, das Gehirnsignale in Echtzeit aufzeichnen soll. Diese Gehirnsignale sollen drahtlos an einen Computer übertragen werden, der die Signale analysiert und in die Worte übersetzt, die eine Person mit Sprachstörung sagen möchte. Demenz wird in diesem Kontext nicht berücksichtigt.',
                 link: 'https://intrecom.eu/project/',
                 organization: 'Technische Universität Graz'
+            },
+            {
+                lat: 47.069650, lng: 15.450052, 
+                application: 'alltagszentriert', 
+                tech: 'neurale_schnittstellen', 
+                name: 'SCOBES-AR',
+                description: 'SCOBES-AR hat das Ziel, auf Basis von Video-Seethrough AR Technik ein multimodales Screening-Instrument zur Früherkennung des Risikos für neurokognitive Einschränkungen für den ambulanten Versorgungsbereich zu entwickeln.',
+                link: 'https://projekte.ffg.at/projekt/3014961',
+                organization: 'FH JOANNEUM'
             },
         
 
