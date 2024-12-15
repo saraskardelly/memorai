@@ -14,8 +14,8 @@
     <!-- Kartengröße festlegen -->
     <style>
         #map {
-            height: 700px;  /* Höhe der Karte */
-            width: 100%;    /* Breite der Karte */
+            height: 700px;  
+            width: 100%;   
         }
     </style>
 </head>
@@ -44,22 +44,20 @@
     <div id="map"></div>
 
     <script>
-        // Karte erstellen und auf Steiermark zentrieren
-        var map = L.map('map').setView([47.3333, 15.3333], 9);  // Zentriere auf Steiermark und setze Zoomstufe
+    
+        var map = L.map('map').setView([47.3333, 15.3333], 9); 
 
-        // Begrenze die Karte auf die Bounding Box der Steiermark
-        var bounds = [[46.17, 14.35], [47.75, 16.15]];  // Bounding Box für Steiermark
-        map.setMaxBounds(bounds);  // Setzt die maximale Begrenzung der Karte
+     
+        var bounds = [[46.17, 14.35], [47.75, 16.15]]; 
+        map.setMaxBounds(bounds); 
         map.on('drag', function() {
-            map.panInsideBounds(bounds);  // Verhindert, dass die Karte außerhalb der Steiermark gezogen wird
+            map.panInsideBounds(bounds); 
         });
 
-        // OpenStreetMap Tile-Layer hinzufügen
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
         }).addTo(map);
 
-        // Projekte mit allen Informationen
         var locations = [
             {
                 lat: 47.065180, lng: 15.450920, 
@@ -70,7 +68,6 @@
                 link: 'https://intrecom.eu/project/',
                 organization: 'Technische Universität Graz'
             },
-
                   {
                 lat: 47.079887, lng: 15.410701, 
                 application: 'alltagszentriert', 
