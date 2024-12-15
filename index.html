@@ -268,40 +268,36 @@
                 organization: 'BrainTrip Health'
             }                                     
 
-            // Hier die anderen Projekte in ähnlicher Weise hinzufügen
+
         ];
 
-        // Gruppe für die Marker erstellen
+
         var markerLayer = L.layerGroup().addTo(map);
 
-        // Marker zur Gruppe hinzufügen
+
         var markers = [];
 
         locations.forEach(function(location) {
             var marker = L.marker([location.lat, location.lng])
                 .bindPopup(`<b>${location.name}</b><br>${location.description}<br><a href="${location.link}" target="_blank">Mehr erfahren</a><br><i>${location.organization}</i>`);
-            marker.application = location.application;  // Füge den Anwendungsbereich hinzu
-            marker.tech = location.tech;  // Füge die Technologie hinzu
+            marker.application = location.application; 
+            marker.tech = location.tech;  
             markers.push(marker);
         });
 
-        // Funktion zum Anwenden der Filter
         function applyFilters() {
             var applicationFilter = document.getElementById('application-filter').value;
             var techFilter = document.getElementById('tech-filter').value;
 
-            markerLayer.clearLayers();  // Alle Marker entfernen
+            markerLayer.clearLayers(); 
             
-            // Marker filtern und wieder hinzufügen
             markers.forEach(function(marker) {
                 if ((applicationFilter === 'all' || marker.application === applicationFilter) &&
                     (techFilter === 'all' || marker.tech === techFilter)) {
-                    markerLayer.addLayer(marker);  // Marker wieder hinzufügen
+                    markerLayer.addLayer(marker); 
                 }
             });
         }
-
-        // Initial alle Marker anzeigen
         applyFilters();
     </script>
 
